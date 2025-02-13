@@ -1,0 +1,1178 @@
+:root {
+    --doradoBrillante: #FFD700;
+    /*Logos, íconos o elementos que destaquen la calidad premium.*/
+    --negroProfundo: #000000;
+    /*texto principal o elementos clave que requieran un impacto visual fuerte.*/
+    --blancoPuro: #FFFFFF;
+    /*Contraste con el negro, espacios en blanco y acentos limpios.*/
+    --azulMarino: #0A2540;
+    /*Encabezados, menús o enlaces.*/
+    --verdeEsmeralda: #50C878;
+    /**/
+    --grisAcero: #4B4B4B;
+    /*Tonos de fondo, botones o divisores.*/
+    --rojoCarmesi: #E63946;
+    /*Elementos que necesitan atención inmediata, como promociones o alertas.*/
+    --amarilloMostaza: #FFC107;
+    /*Resaltar palabras clave, gráficos o íconos específicos.*/
+}
+
+/* etiqueta para que los margenes no afecten a las imagenes */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    color: var(--negroProfundo);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.tituloPrincipal {
+    display: none;
+}
+
+/* navegacion superior */
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.boton {
+    background-color: var(--amarilloMostaza);
+    color: var(--blancoPuro);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: .3rem 0 0 3rem;
+    display: inline-block;
+}
+
+.navBg {
+    background-color: var(--amarilloMostaza);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navegacionPrincipal {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navegacionPrincipal a {
+    color: var(--negroProfundo);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.1s ease;
+    margin-left: 5rem;
+}
+
+.navegacionPrincipal a:hover {
+    transform: scale(1.1);
+}
+
+/* querys para la navegacion de la barra superior */
+@media (max-width: 1024px) {
+
+
+    .navegacionPrincipal a {
+        transition: none;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .navegacionPrincipal a:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navegacionPrincipal a {
+        transition: none;
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .navegacionPrincipal a:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navegacionPrincipal a {
+        transition: none;
+        font-size: .7rem;
+        margin-left: 1rem;
+    }
+}
+
+/* Parrafos del banner e imagenes del banner */
+.bannerPrincipal {
+    background-image: url(../imagenes/nuevoBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 25rem;
+    position: relative;
+    width: 100%;
+}
+
+.contenidoBanner img {
+    position: absolute;
+    right: 15rem;
+    bottom: 5rem;
+    height: 15rem;
+    max-width: 100%;
+}
+
+.contenidoBanner {
+    position: absolute;
+    background-color: rgb(0 0 0 / 40%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.parrafoBanner p {
+    font-size: 1rem;
+    color: var(--blancoPuro);
+    max-width: 40rem;
+    line-height: 1.5;
+}
+
+.parrafoBanner a {
+    text-decoration: none;
+    color: var(--blancoPuro);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.parrafoBanner a:hover {
+    color: var(--negroProfundo);
+    transform: scale(1.1);
+}
+
+.boton {
+    background-color: var(--amarilloMostaza);
+    color: var(--blanco);
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 0rem;
+}
+
+.pRedes {
+    display: none;
+}
+
+/* Querys para los parrafos del banner y las imagenes */
+@media (max-width: 1024px) {
+    .contenidoBanner {
+        position: absolute;
+        background-color: rgb(0 0 0 / 40%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .5rem;
+    }
+
+    .bannerPrincipal {
+        background-image: url(../imagenes/nuevoBanner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .contenidoBanner img {
+        position: absolute;
+        right: 5rem;
+        bottom: 3rem;
+        height: 8rem;
+        max-width: 100%;
+    }
+
+    .parrafoBanner p {
+        font-size: .8rem;
+        color: var(--blancoPuro);
+        max-width: 30rem;
+    }
+}
+
+@media (max-width:768px) {
+    .contenidoBanner {
+        position: absolute;
+        background-color: rgb(0 0 0 / 40%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: .5rem;
+    }
+
+    .bannerPrincipal {
+        height: 15rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .parrafoBanner p {
+        font-size: .8rem;
+        color: var(--blancoPuro);
+        max-width: 20rem;
+        margin: 0 0 1rem 3rem;
+    }
+
+    .boton {
+        background-color: var(--amarilloMostaza);
+        color: var(--negroProfundo);
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        text-decoration: none;
+        margin: .1rem 0 0 3rem;
+        display: inline-block;
+    }
+
+    .contenidoBanner img {
+        position: absolute;
+        right: 5rem;
+        bottom: 3rem;
+        height: 8rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .bannerPrincipal {
+        height: 10rem;
+        width: 100%;
+        position: relative;
+    }
+
+    .parrafoBanner p {
+        font-size: .5rem;
+        color: var(--blancoPuro);
+        max-width: 12rem;
+        margin: 0 0 1rem .5rem;
+    }
+
+    .boton {
+        background-color: var(--amarilloMostaza);
+        color: var(--blancoPuro);
+        padding: .2rem 1rem;
+        font-size: .6rem;
+        text-decoration: none;
+        margin: .1rem 0 0 .5rem;
+        display: inline-block;
+    }
+
+    .contenidoBanner img {
+        position: absolute;
+        right: 3rem;
+        bottom: 1rem;
+        height: 8rem;
+        max-width: 100%;
+    }
+}
+
+/*Servicios (Parrafo y video)*/
+#sPrincipal {
+    text-align: center;
+}
+
+.parrafoSP {
+    margin-bottom: 3rem;
+}
+
+.parrafoSP h2 {
+    font-size: 3rem;
+}
+
+.parrafoSP p {
+    font-size: 1.5rem;
+    line-height: 2;
+    max-width: 80rem;
+    margin: 0 auto;
+    line-height: 2;
+}
+
+.principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    height: 16rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.video-section h3 a {
+    color: var(--blancoPuro);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.video-section h3 a:hover {
+    color: var(--amarilloMostaza);
+    transform: scale(1.1);
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Media query para servicios (Parrafo y video) */
+@media (max-width: 1024px) {
+    .parrafoSP h2 {
+        font-size: 2rem;
+    }
+
+    .parrafoSP p {
+        font-size: 1rem;
+        line-height: 2;
+        max-width: 50rem;
+        margin: 0 auto;
+        line-height: 2;
+    }
+
+    .principal {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .video-section {
+        position: relative;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        height: 10rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    .video-section h3 a {
+        color: var(--blancoPuro);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+}
+
+@media (max-width: 768px) {
+    .parrafoSP h2 {
+        font-size: 2rem;
+    }
+
+    .parrafoSP p {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 40rem;
+        margin: 0 auto;
+        line-height: 2;
+    }
+
+    .principal {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .video-section {
+        position: relative;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        height: 8rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    .video-section h3 a {
+        color: var(--blancoPuro);
+        text-decoration: none;
+        font-size: .8rem;
+        transition: none;
+    }
+
+    .video-section h3 a:hover {
+        transform: none
+    }
+}
+
+@media (max-width: 480px) {
+    .parrafoSP h2 {
+        font-size: 2rem;
+    }
+
+    .parrafoSP p {
+        font-size: 1rem;
+        line-height: 1;
+        max-width: 25rem;
+        margin: 0 auto;
+        line-height: 2;
+    }
+
+    .principal {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .video-section {
+        position: relative;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        height: 8rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    .video-section h3 a {
+        color: var(--blancoPuro);
+        text-decoration: none;
+        font-size: .8rem;
+        transition: none;
+    }
+
+    .video-section h3 a:hover {
+        transform: none
+    }
+}
+
+#portafolio {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    /* Fondo suave para destacar la sección */
+}
+
+.pPrincipal {
+    display: flex;
+    /* Activa flexbox en el contenedor */
+    flex-direction: column;
+    /* Coloca los elementos en columnas, uno sobre el otro */
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    text-align: center;
+    /* Centra el texto dentro del párrafo */
+    height: 100%;
+    /* Ajusta la altura según sea necesario */
+}
+
+
+.pPrincipal p {
+    font-size: 1.5rem;
+    /* Tamaño de la fuente */
+    max-width: 80rem;
+    /* Limita el ancho máximo del párrafo */
+    margin: 0 auto;
+    /* Centra horizontalmente */
+    color: var(--negroProfundo);
+    /* Color del texto */
+}
+
+#portafolio h2,
+#portafolio h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin: 2 auto;
+    color: var(--negroProfundo);
+}
+
+/* Carrusel */
+.carrusel {
+    max-width: 120rem;
+    /* Ancho máximo del carrusel */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    padding: 1rem;
+    /* Espaciado interno */
+}
+
+.carrusel h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--negroProfundo);
+}
+
+/* Contenedor del carrusel */
+.carrusel-contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Mantiene los proyectos en una fila */
+    gap: 4rem;
+    /* Espaciado entre proyectos */
+    overflow-x: auto;
+    /* Desplazamiento horizontal */
+    padding-bottom: 1rem;
+    /* Espacio inferior */
+    scrollbar-width: thin;
+    /* Scroll delgado (navegadores soportados) */
+}
+
+.carrusel-contenedor::-webkit-scrollbar {
+    height: 8px;
+    /* Altura del scroll */
+}
+
+.carrusel-contenedor::-webkit-scrollbar-thumb {
+    background-color: var(--grisOscuro);
+    border-radius: 4px;
+    /* Bordes redondeados del scroll */
+}
+
+/* Proyecto */
+.proyecto {
+    display: flex;
+    flex-direction: row;
+    /* Organiza imagen y contenido en fila */
+    align-items: center;
+    /* Alinea verticalmente */
+    gap: 4rem;
+    /* Espaciado entre imagen y texto */
+    flex: 0 0 auto;
+    /* Evita que los proyectos se reduzcan más de lo necesario */
+    max-width: 100%;
+    /* Ancho máximo del proyecto */
+}
+
+/* Imagen del proyecto */
+.proyecto img {
+    width: 50rem;
+    /* Ancho fijo para las imágenes */
+    height: auto;
+    /* Mantiene la proporción */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra ligera */
+}
+
+/* Títulos de los proyectos */
+.proyecto h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--negroProfundo);
+    margin: 0;
+    text-align: center;
+}
+
+/* Contenedor del contenido del proyecto */
+.proyecto div {
+    display: flex;
+    flex-direction: column;
+    /* Organiza los elementos en una columna */
+    align-items: center;
+    /* Centra todo horizontalmente */
+    text-align: center;
+    gap: 1rem;
+    /* Espaciado uniforme entre los elementos */
+    max-width: 50rem;
+    margin: auto;
+    /* Centrar el div si es necesario */
+}
+
+/* Párrafos de los proyectos */
+.proyecto p {
+    font-size: 1.2rem;
+    color: var(--grisOscuro);
+    margin: 0;
+    line-height: 1.5rem;
+    max-width: 40rem;
+    text-align: center;
+}
+
+/* Botón alineado con el párrafo */
+.eWeb {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--amarilloMostaza);
+    color: var(--negroProfundo);
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    /* Separación extra respecto al último párrafo */
+}
+
+/* Efecto al pasar el mouse */
+.eWeb:hover {
+    background-color: #e6b800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 1024px) {
+    .pPrincipal p {
+        font-size: 1rem;
+        line-height: 2;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    #portafolio h2,
+    #portafolio h3 {
+        font-size: 2rem;
+    }
+
+    /* Ajustes en los títulos de los proyectos */
+    .proyecto h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        max-width: 50rem;
+        color: var(--negroProfundo);
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Ajustes en los párrafos de los proyectos */
+    .proyecto p {
+        font-size: 0.9rem;
+        line-height: 1.3rem;
+    }
+
+    /* Ajuste en las imágenes de los proyectos */
+    .proyecto img {
+        width: 30rem;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
+    }
+
+    /* Botón */
+    .eWeb {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        margin-top: 1rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .proyecto {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        /* Espaciado entre imagen y texto */
+        flex: 0 0 auto;
+        /* Evita que los proyectos se reduzcan más de lo necesario */
+        max-width: 100%;
+        /* Ancho máximo del proyecto */
+    }
+
+    .pPrincipal p {
+        font-size: 1rem;
+        line-height: 2;
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+
+    #portafolio h2,
+    #portafolio h3 {
+        font-size: 2rem;
+    }
+
+    /* Ajustes en los títulos de los proyectos */
+    .proyecto h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--negroProfundo);
+        margin: 0;
+        text-align: center;
+    }
+
+    /* Ajustes en los párrafos de los proyectos */
+    .proyecto p {
+        font-size: .7rem;
+        line-height: 1rem;
+    }
+
+    /* Ajuste en las imágenes de los proyectos */
+    .proyecto img {
+        width: 20rem;
+        box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
+    }
+
+    /* Botón */
+    .eWeb {
+        font-size: .8rem;
+        padding: 0.6rem 1.3rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #portafolio {
+        padding: 2rem 1rem;
+        background-color: #f9f9f9;
+    }
+
+    .pPrincipal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    .pPrincipal p {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+        color: var(--negroProfundo);
+    }
+
+    #portafolio h2,
+    #portafolio h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--negroProfundo);
+    }
+
+    /* Mantiene el estilo de carrusel */
+    .carrusel {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .carrusel h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--negroProfundo);
+    }
+
+    /* Contenedor del carrusel */
+    .carrusel-contenedor {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5rem;
+        padding: 0 1rem;
+    }
+
+    /* Ajuste del scroll */
+    .carrusel-contenedor::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    .carrusel-contenedor::-webkit-scrollbar-thumb {
+        background-color: var(--grisOscuro);
+        border-radius: 4px;
+    }
+
+    /* Proyecto: Apilar imagen y texto */
+    .proyecto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+        flex: 0 0 100%;
+        /* Hace que cada proyecto ocupe todo el ancho del carrusel */
+    }
+
+    /* Imagen del proyecto */
+    .proyecto img {
+        width: 100%;
+        max-width: 30rem;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Contenido del proyecto */
+    .proyecto div {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 90%;
+        padding: 0 1rem;
+    }
+
+    /* Títulos de los proyectos */
+    .proyecto h4 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--negroProfundo);
+        margin: 0;
+    }
+
+    /* Párrafos de los proyectos */
+    .proyecto p {
+        font-size: 1rem;
+        color: var(--grisOscuro);
+        margin: 0;
+        line-height: 1.4rem;
+        text-align: center;
+    }
+
+    .eWeb {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+.categoria {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.categoria h2 {
+    font-size: 2rem;
+    color: var(--negroProfundo);
+    margin-bottom: 20px;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-card {
+    background: var(--blancoPuro);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    width: 220px;
+}
+
+.logo-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.logo-card h4 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--negroProfundo);
+}
+
+@media (max-width: 480px) {
+    .logo-card {
+
+        width: 300px;
+    }
+}
+
+footer {
+    background-color: var(--amarilloMostaza);
+    color: black;
+    padding: 10px 0;
+}
+
+/* Contenedor principal de la sección */
+#testimonios {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Título de la sección */
+#testimonios h2 {
+    font-size: 3rem;
+    color: var(--negroProfundo);
+    margin-bottom: 30px;
+}
+
+/* Contenedor de testimonios con diseño de grid */
+.testimonios-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en desktop */
+    gap: 40px; /* Espaciado entre testimonios */
+    justify-items: center;
+    align-items: start;
+}
+
+/* Cada testimonio */
+.testimonio {
+    text-align: center;
+    max-width: 300px; /* Controla el ancho para que se vean proporcionados */
+}
+
+/* Estilos del comentario */
+.comentario {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--negroProfundo);
+    margin-bottom: 15px;
+}
+
+/* Contenedor de la imagen y nombre */
+.cliente {
+    display: flex;
+    flex-direction: column; /* Imagen arriba, texto abajo */
+    align-items: center;
+}
+
+/* Imagen del cliente */
+.cliente img {
+    width: 100px; /* Tamaño uniforme */
+    height: 100px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Ajusta la imagen dentro del recorte circular */
+}
+
+/* Nombre del cliente */
+.nombre {
+    font-size: 0.9rem;
+    color: var(--negroProfundo);
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.formulario {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--blancoPuro);
+}
+
+.formulario h2 {
+    font-size: 2rem;
+    color: var(--negroProfundo);
+    margin-bottom: 30px;
+}
+
+.formulario form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: var(--grisAcero);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--blancoPuro);
+    margin-bottom: 15px;
+}
+
+.formulario div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: var(--blancoPuro);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--negroProfundo);
+    border-radius: 8px;
+    font-size: 1rem;
+    background: var(--blancoPuro);
+}
+
+.formulario textarea {
+    height: 100px;
+    resize: none;
+}
+
+.formulario input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+.formulario input[type="submit"] {
+    background: var(--verdeEsmeralda);
+    color: var(--blancoPuro);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease-in-out;
+}
+
+.formulario input[type="submit"]:hover {
+    background: var(--azulMarino);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    /* Centra las secciones en la página */
+    align-items: flex-start;
+    /* Alinea los títulos en la parte superior */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    /* Define un ancho máximo para el footer */
+    margin: 0 auto;
+    /* Centra el footer en la página */
+    padding: 10px;
+    text-align: center;
+    /* Centra los textos dentro de cada sección */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    /* Centra los textos de cada sección */
+}
+
+.footer-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 0.9rem;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    /* Centra los íconos sociales */
+    gap: 10px;
+}
+
+.social-icons a {
+    font-size: 2rem;
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: var(--azulMarino);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 3px;
+}
+
+.footer-bottom {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+
+    .footer-section {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        /* Centra los textos de cada sección */
+    }
+    .footer-container {
+        max-width: 450px;
+        /* Define un ancho máximo para el footer */
+    }
+
+    .footer-section h2 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: .8rem;
+        color: black;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,592 @@
+:root {
+    --doradoBrillante: #FFD700;
+    /*Logos, íconos o elementos que destaquen la calidad premium.*/
+    --negroProfundo: #000000;
+    /*texto principal o elementos clave que requieran un impacto visual fuerte.*/
+    --blancoPuro: #FFFFFF;
+    /*Contraste con el negro, espacios en blanco y acentos limpios.*/
+    --azulMarino: #0A2540;
+    /*Encabezados, menús o enlaces.*/
+    --verdeEsmeralda: #50C878;
+    /**/
+    --grisAcero: #4B4B4B;
+    /*Tonos de fondo, botones o divisores.*/
+    --rojoCarmesi: #E63946;
+    /*Elementos que necesitan atención inmediata, como promociones o alertas.*/
+    --amarilloMostaza: #FFC107;
+    /*Resaltar palabras clave, gráficos o íconos específicos.*/
+}
+
+/* etiqueta para que los margenes no afecten a las imagenes */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 5rem;
+    z-index: 2;
+    color: var(--blancoPuro);
+    text-align: center;
+    background-color: rgb(0 0 0 / 60%);
+}
+
+.hero-content img {
+    position: absolute;
+    right: 12rem;
+    bottom: 5rem;
+    height: 15rem;
+    max-width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+    max-width: 40rem;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0.5rem 0;
+    max-width: 40rem;
+    text-align: left;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: var(--negroProfundo);
+    background-color: var(--amarilloMostaza);
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    background-color: var(--amarilloMostaza);
+    color: var(--blancoPuro);
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 20rem;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 3rem;
+        z-index: 2;
+        color: var(--blancoPuro);
+        text-align: center;
+        background-color: rgb(0 0 0 / 60%);
+    }
+
+    .hero-content img {
+        position: absolute;
+        right: 8rem;
+        bottom: 5rem;
+        height: 10rem;
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+        margin: 0.3rem 0;
+        max-width: 30rem;
+    }
+
+    .hero-content p {
+        font-size: .8rem;
+        line-height: 1.5;
+        margin: 0.5rem 0;
+        max-width: 30rem;
+        text-align: left;
+    }
+
+    .cta-button {
+        text-decoration: none;
+        font-size: .8rem;
+        color: var(--negroProfundo);
+        background-color: var(--amarilloMostaza);
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .cta-button:hover {
+        background-color: var(--amarilloMostaza);
+        color: var(--blancoPuro);
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 15rem;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2rem;
+        z-index: 2;
+        color: var(--blancoPuro);
+        text-align: center;
+        background-color: rgb(0 0 0 / 60%);
+    }
+
+    .hero-content img {
+        position: absolute;
+        right: 6rem;
+        bottom: 4rem;
+        height: 8rem;
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+        margin: 0.3rem 0;
+        max-width: 25rem;
+    }
+
+    .hero-content p {
+        font-size: .6rem;
+        line-height: 1.5;
+        margin: 0.5rem 0;
+        max-width: 25rem;
+        text-align: left;
+    }
+
+    .cta-button {
+        text-decoration: none;
+        font-size: .6rem;
+        color: var(--negroProfundo);
+        background-color: var(--amarilloMostaza);
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .cta-button:hover {
+        background-color: var(--amarilloMostaza);
+        color: var(--blancoPuro);
+        transform: scale(1.1);
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 13rem;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 1rem;
+        z-index: 2;
+        color: var(--blancoPuro);
+        text-align: center;
+        background-color: rgb(0 0 0 / 60%);
+    }
+
+    .hero-content img {
+        position: absolute;
+        right: 3rem;
+        bottom: 4rem;
+        height: 6rem;
+        max-width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+        margin: 0.3rem 0;
+        max-width: 20rem;
+    }
+
+    .hero-content p {
+        font-size: .6rem;
+        line-height: 1.5;
+        margin: 0.5rem 0;
+        max-width: 20rem;
+        text-align: left;
+    }
+
+    .cta-button {
+        text-decoration: none;
+        font-size: .6rem;
+        color: var(--negroProfundo);
+        background-color: var(--amarilloMostaza);
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        margin-top: .5rem;
+    }
+
+    .cta-button:hover {
+        background-color: var(--amarilloMostaza);
+        color: var(--blancoPuro);
+        transform: scale(1.1);
+    }
+
+    /* media query para pantallas pequeñas seccion banner web */
+}
+
+.dWebServicios {
+    max-width: 100rem; /* Ancho máximo del contenedor: 1600px (1rem = 16px por defecto) */
+    width: 90%; /* Asegura que el contenedor ocupe el 90% del ancho disponible en pantallas pequeñas */
+    margin: 2rem auto; /* Centra horizontalmente con margen automático y ajusta el espacio vertical */
+    padding: 2rem; /* Espaciado interno para que el contenido no esté pegado a los bordes */
+    background-color: var(--blancoPuro); /* Color de fondo */
+    box-shadow: 0 4px 20px rgb(0 0 0 / 25%); /* Sombra para dar profundidad */
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+
+.icono {
+    width: 6rem;
+    height: 6rem;
+}
+
+/* Estilos para los SVG al todos tener el ID capa2 aqui se dicta el estilo de todos */
+#Capa_2 {
+    width: 6rem;
+    height: 6rem;
+}
+
+#Capa {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1px;
+    width: 6rem;
+    height: 6rem;
+    
+}
+
+/*diseño unicamete para diseño para redes sociales por sus propiedades de diseño*/
+#Capa_other {
+    width: 6rem;
+    height: 6rem;
+}
+
+/*diseño unicamete para otros servicios complementarios por sus propiedades de diseño*/
+
+#Capa_other .cls-1 {
+    stroke-width: 0px;
+    fill: none;
+}
+
+/*diseño unicamete para otros servicios complementarios por sus propiedades de diseño*/
+
+#Capa_other .cls-2 {
+    fill: none;
+    stroke: #000;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.3px;
+}
+
+
+.dWebServicios h2 {
+    display: flex;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 8rem;
+    margin-top: 5rem;
+}
+
+.servicios h3 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.servicios p {
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    gap: 4rem;
+    margin: 1rem 2rem;
+    align-items: start;
+    text-align: center;
+}
+
+.cotizacion {
+    background-color: var(--amarilloMostaza);
+    color: var(--negroProfundo);
+    font-weight: bold;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 0;
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cotizacion:hover {
+    transform: scale(1.1);
+    /* Aumenta el tamaño al pasar el mouse */
+    background-color: var(--amarilloMostaza);
+    /* Cambia ligeramente el color de fondo */
+    color: var(--blancoPuro);
+}
+
+@media (max-width: 1024px) {
+    .dWebServicios {
+        max-width: 60rem;
+    }
+
+    /* Estilos para los SVG al todos tener el ID capa2 aqui se dicta el estilo de todos */
+    #Capa_2 {
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+    /*diseño unicamete para diseño para redes sociales por sus propiedades de diseño*/
+    #Capa_other {
+        width: 5rem;
+        height: 5rem;
+    }
+
+
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos columnas iguales */
+    }
+
+    .dWebServicios h2 {
+        display: flex;
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .servicios h3 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .servicios p {
+        font-weight: 300;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    .cotizacion {
+        background-color: var(--amarilloMostaza);
+        color: var(--negroProfundo);
+        font-weight: bold;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        text-decoration: none;
+        margin: 0;
+        /* Elimina márgenes si usas `gap` */
+        display: inline-block;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        /* Transiciones suaves */
+        margin-top: 1rem;
+    }
+
+    .cotizacion:hover {
+        transform: scale(1.1);
+        /* Aumenta el tamaño al pasar el mouse */
+        background-color: var(--amarilloMostaza);
+        /* Cambia ligeramente el color de fondo */
+        color: var(--blancoPuro);
+    }
+}
+
+@media (max-width: 768px) {
+    .dWebServicios {
+        max-width: 45rem;
+    }
+
+    /* Estilos para los SVG al todos tener el ID capa2 aqui se dicta el estilo de todos */
+    #Capa_2 {
+        width: 6rem;
+        height: 6rem;
+    }
+    /*diseño unicamete para diseño para redes sociales por sus propiedades de diseño*/
+    #Capa_other {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .dWebServicios h2 {
+        display: flex;
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .servicios h3 {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .servicios p {
+        font-weight: 500;
+        font-size: .8rem;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+
+    .cotizacion {
+        background-color: var(--amarilloMostaza);
+        color: var(--negroProfundo);
+        font-weight: bold;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        text-decoration: none;
+        margin: 0;
+        display: inline-block;
+        transition: none;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .dWebServicios {
+        max-width: 45rem;
+    }
+
+    /* Estilos para los SVG al todos tener el ID capa2 aqui se dicta el estilo de todos */
+    #Capa_2 {
+        width: 4rem;
+        height: 4rem;
+    }
+    /*diseño unicamete para diseño para redes sociales por sus propiedades de diseño*/
+    #Capa_other {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .dWebServicios h2 {
+        display: flex;
+        font-size: 2rem;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .servicios h3 {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .servicios p {
+        font-weight: 500;
+        font-size: .8rem;
+        text-align: center;
+        line-height: 1.2rem;
+    }
+
+    .cotizacion {
+        background-color: var(--amarilloMostaza);
+        color: var(--negroProfundo);
+        font-weight: bold;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        text-decoration: none;
+        margin: 0;
+        display: inline-block;
+        transition: none;
+        margin-top: 1rem;
+    }
+}
