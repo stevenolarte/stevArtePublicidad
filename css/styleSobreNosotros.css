@@ -1,0 +1,241 @@
+/* =========================================
+   BASE SECCIÓN
+========================================= */
+
+.sobre-nosotros {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   TITULO PRINCIPAL
+========================================= */
+
+.sobre-nosotros h1 {
+    font-size: 3.6rem;
+    color: var(--azulMarino);
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+/* párrafo inicial (más fuerte) */
+.sobre-nosotros>p:first-of-type {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--grisAcero);
+    max-width: 750px;
+    margin: 0 auto 60px;
+}
+
+/* =========================================
+   SECCIONES (H2)
+========================================= */
+
+.sobre-nosotros h2 {
+    font-size: 3rem;
+    color: var(--azulMarino);
+    margin: 80px 0 15px;
+    position: relative;
+}
+
+/* línea decorativa sutil */
+.sobre-nosotros h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--verdeEsmeralda);
+    margin-top: 10px;
+    border-radius: 2px;
+}
+
+/* =========================================
+   PÁRRAFOS
+========================================= */
+
+.sobre-nosotros p {
+    font-size: 2rem;
+    color: var(--grisAcero);
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* resaltar strong */
+.sobre-nosotros strong {
+    color: var(--azulMarino);
+    font-weight: 600;
+}
+
+/* =========================================
+   LISTAS
+========================================= */
+
+.sobre-nosotros ul {
+    margin: 25px 0 40px;
+    padding: 0;
+    list-style: none;
+}
+
+.sobre-nosotros li {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* ❌ ELIMINAMOS TODOS LOS BULLETS */
+.sobre-nosotros li::before {
+    content: none;
+}
+
+/* =========================================
+   SUBTITULOS H3
+========================================= */
+
+.sobre-nosotros h3 {
+    margin-bottom: 6px;
+    color: var(--azulMarino);
+    font-size: 2rem;
+}
+
+/* =========================================
+   BLOQUES DESTACADOS (tipo cards suaves)
+========================================= */
+
+.sobre-nosotros ul li {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* hover elegante */
+.sobre-nosotros ul li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   BLOQUE DE SERVICIOS (TARJETAS)
+========================================= */
+
+/* convierte la lista en grid */
+.sobre-nosotros ul:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* tarjeta */
+.sobre-nosotros ul:first-of-type li {
+    background: #fff;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    padding-left: 22px;
+    /* 🔥 ajustado (ya no hay icono) */
+}
+
+/* hover */
+.sobre-nosotros ul:first-of-type li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* texto */
+.sobre-nosotros ul:first-of-type li {
+    font-size: 2rem;
+    color: var(--grisAcero);
+    line-height: 1.5;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+    .sobre-nosotros ul:first-of-type {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   CONTACTO FINAL
+========================================= */
+
+.contacto-links {
+    margin-top: 40px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* botones */
+.contacto-links a {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+/* whatsapp (principal) */
+.contacto-links a:first-child {
+    background: var(--verdeEsmeralda);
+    color: #fff;
+}
+
+.contacto-links a:first-child:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* secundarios */
+.contacto-links a:not(:first-child) {
+    border: 2px solid var(--verdeEsmeralda);
+    color: var(--verdeEsmeralda);
+}
+
+.contacto-links a:not(:first-child):hover {
+    background: var(--verdeEsmeralda);
+    color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE GENERAL
+========================================= */
+
+@media (max-width: 768px) {
+
+    .sobre-nosotros {
+        padding: 70px 20px;
+    }
+
+    .sobre-nosotros h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-nosotros h2 {
+        font-size: 1.5rem;
+        margin-top: 50px;
+    }
+
+    .sobre-nosotros p {
+        font-size: 1rem;
+    }
+
+    .contacto-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contacto-links a {
+        text-align: center;
+    }
+}

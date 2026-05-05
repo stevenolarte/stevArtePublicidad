@@ -1,0 +1,165 @@
+/* ================= LAYOUT ================= */
+
+/* Contenedor sección */
+.articulos {
+    width: 100%;
+    padding: 6rem 6%;
+    background-color: var(--blancoPuro);
+    box-sizing: border-box;
+}
+
+/* Grid reutilizable */
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= INTRO ================= */
+
+.intro-publitips {
+    color: var(--azulMarino);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ================= COMPONENTE: CARD ================= */
+
+.card {
+    background-color: var(--blancoPuro);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    text-align: left;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Línea decorativa */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--amarilloMostaza);
+    transition: all 0.35s ease;
+    pointer-events: none;
+}
+
+/* Hover base */
+.card:hover {
+    background-color: var(--azulMarino);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover::before {
+    width: 100%;
+    opacity: 0.08;
+}
+
+
+/* ================= VARIANTE: BLOG CARD ================= */
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.blog-card:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.blog-card h2 {
+    font-family: var(--fuenteHeading);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--negroProfundo);
+    transition: color 0.3s ease;
+}
+
+.blog-card p {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.4rem;
+    color: var(--grisAcero);
+    line-height: 1.6;
+    margin-bottom: 15px;
+
+    /* truncado elegante */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    transition: color 0.3s ease;
+}
+
+/* Hover texto */
+.card:hover h2,
+.card:hover p {
+    color: var(--blancoPuro);
+}
+
+
+/* ================= LINK ================= */
+
+.leer-mas {
+    font-family: var(--fuenteParrafos);
+    font-size: 1.5rem;
+    color: var(--azulMarino);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+/* Flecha */
+.leer-mas::after {
+    content: "→";
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Hover flecha */
+.leer-mas:hover::after {
+    transform: translateX(6px);
+}
+
+/* Hover link */
+.card:hover .leer-mas {
+    color: var(--blancoPuro);
+}
